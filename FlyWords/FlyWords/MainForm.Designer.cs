@@ -33,9 +33,9 @@
             this.paneltop = new System.Windows.Forms.Panel();
             this.labshuo = new System.Windows.Forms.Label();
             this.labNickName = new System.Windows.Forms.Label();
-            this.picbxHeadImg = new System.Windows.Forms.PictureBox();
             this.paFriendList = new System.Windows.Forms.Panel();
             this.HeadImgs = new System.Windows.Forms.ImageList(this.components);
+            this.picbxHeadImg = new System.Windows.Forms.PictureBox();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxHeadImg)).BeginInit();
             this.SuspendLayout();
@@ -67,14 +67,6 @@
             this.labNickName.Size = new System.Drawing.Size(41, 12);
             this.labNickName.TabIndex = 1;
             this.labNickName.Text = "hollis";
-            // 
-            // picbxHeadImg
-            // 
-            this.picbxHeadImg.Location = new System.Drawing.Point(0, 0);
-            this.picbxHeadImg.Name = "picbxHeadImg";
-            this.picbxHeadImg.Size = new System.Drawing.Size(60, 60);
-            this.picbxHeadImg.TabIndex = 0;
-            this.picbxHeadImg.TabStop = false;
             // 
             // paFriendList
             // 
@@ -193,6 +185,16 @@
             this.HeadImgs.Images.SetKeyName(101, "Ziggs_Square_0.png");
             this.HeadImgs.Images.SetKeyName(102, "Zilean_Square_0.png");
             this.HeadImgs.Images.SetKeyName(103, "Zyra_Square_0.png");
+            // 
+            // picbxHeadImg
+            // 
+            this.picbxHeadImg.Image = global::FlyWords.Properties.Resources.Garen_Square_0;
+            this.picbxHeadImg.Location = new System.Drawing.Point(0, 0);
+            this.picbxHeadImg.Name = "picbxHeadImg";
+            this.picbxHeadImg.Size = new System.Drawing.Size(60, 60);
+            this.picbxHeadImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbxHeadImg.TabIndex = 0;
+            this.picbxHeadImg.TabStop = false;
             // 
             // MainForm
             // 

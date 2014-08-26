@@ -13,21 +13,25 @@ using System.Threading;
 namespace FlyWords
 {
     public partial class MainForm : Form
-    {
+    {  
         public delegate void deAddFriend(friend friend);
         public MainForm()
         {
             InitializeComponent();
         }
-        
+
+        private Thread th;
         private void Main_Load(object sender, EventArgs e)
         {
-            sendmsg();
+
+            
             MainForm.CheckForIllegalCrossThreadCalls = false;
-            Thread th = new Thread(new ThreadStart(listen));
+            th = new Thread(new ThreadStart(listen));
             Thread.Sleep(100);
             th.IsBackground = true;
             th.Start();
+            sendmsg();
+            
             
         }    
          private void sendmsg(){
@@ -73,13 +77,14 @@ namespace FlyWords
 
                      object[] pars = new object[1];
                      pars[0] = friend;
-                     this.Invoke(new deAddFriend(this.addUcf),pars[0]);
+                     this.Invoke(new deAddFriend(addUcf),pars);
                  }
              }
          }
 
          private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
          {
+             //th.Abort();
              Application.Exit();
          } 
 

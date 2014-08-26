@@ -69,5 +69,15 @@ namespace FlyWords.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Garen_Square_0 {
+            get {
+                object obj = ResourceManager.GetObject("Garen_Square_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
