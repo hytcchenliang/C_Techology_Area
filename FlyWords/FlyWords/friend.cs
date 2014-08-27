@@ -12,5 +12,7 @@ namespace FlyWords
         public int headImg{ get; set; }
         public string shuoshuo{ get; set; }
         public IPAddress IP{ get; set; }
+        public bool isopen{ get; set; }
+        
     }
 }
