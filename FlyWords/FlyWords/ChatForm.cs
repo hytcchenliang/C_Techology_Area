@@ -17,7 +17,14 @@ namespace FlyWords
         {
             InitializeComponent();
         }
-        
+
+        private string mesg;
+        public string Mesg
+        {
+            get { return mesg;}
+            set { mesg = value;}
+        }
+
         private void ChatForm_Load(object sender, EventArgs e)
         {
 
@@ -49,13 +56,12 @@ namespace FlyWords
         private void sendbtn_Click(object sender, EventArgs e)
         {
             UdpClient uc = new UdpClient();
-            string msg = "PUBLIC|"+this.teboxmsg.Text;
+            string msg = "MSG|" + this.teboxmsg.Text+"|hollis:";
             byte[] bmsg = Encoding.Default.GetBytes(msg);
-            string IP = "255.255.255.255";
-            IPEndPoint iep = new IPEndPoint(IPAddress.Parse(IP),9527);
+            IPEndPoint iep = new IPEndPoint(this.curfriend1.IP, 9527);
             string[] str = msg.Split('|');
-            uc.Send(bmsg,bmsg.Length,iep);
-            this.chathistory.AppendText("hollis : "+str[1]+"\r\n");
+            uc.Send(bmsg, bmsg.Length, iep);
+            this.chathistory.AppendText("hollis : " + str[1] + "\r\n");
         }
 
     }

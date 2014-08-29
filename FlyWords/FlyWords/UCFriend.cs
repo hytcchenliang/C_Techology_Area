@@ -42,9 +42,10 @@ namespace FlyWords
         {
           
         }
-
+        
         private void UCFriend_Click(object sender, EventArgs e)
         {
+           
             if (this.curfriend2.isopen == false)
             {
                 ChatForm chafrm = new ChatForm();
@@ -52,6 +53,22 @@ namespace FlyWords
                 this.curfriend2.isopen = true;
                 chafrm.Fm1 = this.frm;//此语句使Fm1有frm的属性（能使用HeadImages）
                 chafrm.Curfriend = this.curfriend2;
+                this.curfriend2.fchat=chafrm;
+                frm.friendlist.Add(curfriend2);
+            }
+        }
+
+        private void timerjump_Tick(object sender, EventArgs e)
+        {
+            //timerjump.Enabled = true;
+            timerjump.Interval = 100;
+           
+            if(this.ucPicHeadImg.Top==0){
+                this.ucPicHeadImg.Top = 5;
+            }
+            else if (this.ucPicHeadImg.Top == 5)
+            {
+                this.ucPicHeadImg.Top = 0;
             }
         }
     }

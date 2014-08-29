@@ -113,7 +113,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox chathistory;
+        public System.Windows.Forms.TextBox chathistory;
         private System.Windows.Forms.TextBox teboxmsg;
         private System.Windows.Forms.Button sendbtn;
         private System.Windows.Forms.Label chatname;

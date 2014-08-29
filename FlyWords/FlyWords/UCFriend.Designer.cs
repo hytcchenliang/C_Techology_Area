@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ucPicHeadImg = new System.Windows.Forms.PictureBox();
             this.uclabWName = new System.Windows.Forms.Label();
             this.ucLabshuo = new System.Windows.Forms.Label();
+            this.timerjump = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ucPicHeadImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +64,9 @@
             this.ucLabshuo.TabIndex = 3;
             this.ucLabshuo.Text = "我是世界第一枪王。";
             // 
+            // timerjump
+            // 
+            // 
             // UCFriend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -84,5 +89,6 @@
         private System.Windows.Forms.PictureBox ucPicHeadImg;
         private System.Windows.Forms.Label uclabWName;
         private System.Windows.Forms.Label ucLabshuo;
+        public System.Windows.Forms.Timer timerjump;
     }
 }

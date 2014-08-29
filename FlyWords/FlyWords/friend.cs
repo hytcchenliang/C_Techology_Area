@@ -13,6 +13,6 @@ namespace FlyWords
         public string shuoshuo{ get; set; }
         public IPAddress IP{ get; set; }
         public bool isopen{ get; set; }
-        
+        public ChatForm fchat { get; set;}
     }
 }
